@@ -10,8 +10,9 @@ module.exports = {
     },
     readfile: function (path, recall) {    //异步执行
         fs.readFile(path, function (err, data) {
-            if (err) {
+            if (err) {//异步异常处理,如果文件地址不对调用recall方法结束res.end("");
                 console.log(err);
+                recall("文件不存在");
             } else {
                 // console.log(data.toString());
                 //res.write(data.toString());  //打印到前端这种方式会报错
