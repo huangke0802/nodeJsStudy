@@ -1,0 +1,87 @@
+body {
+  font: 14px "Microsoft YaHei UI", Helvetica, Arial, sans-serif;
+  width: 70%;
+  margin: 0 auto;
+}
+
+ul,li,ol{
+  list-style: none;
+}
+
+.header{
+  padding: 20px 0;
+}
+
+.header>div,.header>ul{
+  float : left;
+}
+
+ul.list{
+  margin-left:10px;
+}
+
+ul.list>li{
+  float: left;
+  font-size: 19px;
+  margin: 0 20px;
+}
+
+.logo>h1{
+  display: inline;
+  font-size: 29px;
+}
+
+.logo>span{
+  font-size: 25px;
+}
+
+.buttonWrap>div{
+  position: relative;
+  display: inline-block;
+}
+
+#reseach{
+  position: absolute;
+  right: 0;
+  border:none;
+  background: none;
+}
+
+.nav>ul.nav-list{
+  padding: 0;
+  background: darkgreen;
+}
+
+.nav>ul.nav-list>li{
+  float: left;
+  color: #fff;
+  font-size: 18px;
+  padding: 10px 10px 10px 10px;
+}
+
+.content>div{
+  float: left;
+  border: 1px solid #ddd;
+}
+
+.content>div.left-content{
+  width:70%;
+}
+
+.content>div.right-content{
+  width:26%;
+  float: right;
+}
+
+.left-content>.title{
+  margin-top:10px;
+}
+
+.right-content>.title{
+  margin:10px 0;
+}
+
+.left-content>.title>li{
+  float: left;
+  margin:0 10px;
+}

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/bootstrap/css/bootstrap.css">
+      <link rel="stylesheet" href="/stylesheets/index.css">
+    <script src="/javascripts/jQuery.js"></script>
+    <script src="/bootstrap/js/bootstrap.js"></script>
+    <script src="/javascripts/index.js"></script>
+  </head>
+  <body>
+    <div class="header clearfix">
+        <div class="logo"><span class="glyphicon glyphicon-comment"></span><h1>问吧</h1></div>
+        <ul class="list clearfix">
+          <li>答问</li>
+          <li>文章</li>
+          <li>笔记</li>
+          <li>活动</li>
+        </ul>
+        <div class="buttonWrap">
+            <div>
+              <input type="text" placeholder="请输入关键词">
+              <button id="reseach" type="button" class="glyphicon glyphicon-search"></button>
+            </div>
+            <button type="button" class="btn btn-success" data-toggle="modal" data-target="#loginModal" href="./users/login">登录/注册</button>
+        </div>
+    </div>
+    <div class="nav">
+        <ul class="nav-list clearfix">
+            <li>home</li>
+            <li>javascript</li>
+            <li>php</li>
+            <li>pathon</li>
+            <li>java</li>
+            <li>mysql</li>
+            <li>ios</li>
+            <li>android</li>
+            <li>node.js</li>
+            <li>html5</li>
+            <li>lunux</li>
+            <li>c++</li>
+            <li>...</li>
+        </ul>
+    </div>
+    <div class="content clearfix">
+        <div class="left-content">
+            <ul class="title clearfix">
+                <li>最新</li>
+                <li>最热</li>
+                <li>未回答</li>
+            </ul>
+            <table class="table">
+                <tr>
+                    <td>
+                        <div>
+                            <p>0</p>
+                            <span>回答</span>
+                        </div>
+                    </td>
+                    <td>
+                        <div>
+                            <p>36</p>
+                            <span>浏览</span>
+                        </div>
+                    </td>
+                    <td>
+                        <div>
+                            <p>node.js如何与vue.js两线开发</p>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div>
+                            <p>0</p>
+                            <span>回答</span>
+                        </div>
+                    </td>
+                    <td>
+                        <div>
+                            <p>36</p>
+                            <span>浏览</span>
+                        </div>
+                    </td>
+                    <td>
+                        <div>
+                            <p>node.js如何与vue.js两线开发</p>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="right-content">
+            <div class="title">
+                排行榜
+            </div>
+            <table class="table">
+                <tr>
+                    <td>1</td>
+                    <td>Bangalore</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Mumbar</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Bangalore</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <!--登录/注册模态框-->
+    <div class="modal fade bs-example-modal-lg" id="loginModal" tabindex="-1" role="dialog" data-backdrop="static" data-keyboard="false">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+               
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+  </body>
+</html>

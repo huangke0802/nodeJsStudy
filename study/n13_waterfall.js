@@ -29,10 +29,11 @@ function twoFun()
 /*oneFun();
 twoFun();*/
 
-//串行
+//串行有关联
 function exec(){
-    aysc.series({
-        one : function(done){
+    aysc.waterfall(
+        [
+        function(done){
             ii = 0;
             setInterval(function(){
                 console.log("aaa = " + new Date());
@@ -45,20 +46,20 @@ function exec(){
             console.log("oneFun");
 
         },
-        two : function(done){
+       function(preVal,done){
             jj = 0;
             setInterval(function(){
-                console.log("bbb = " + new Date());
+                console.log(preVal  + "= " + new Date());
                 jj++;
                 if(jj == 3){
                     clearInterval(this);
-                    done(null, 'two完毕');
+                    done(null, preVal + ' +++++++ two完毕');
                 }
             }, 1000);
             console.log("oneFun执行完了");
 
         }
-    }, function(err, rs){
+    ], function(err, rs){
         console.log(err);
         console.log(rs);
     })

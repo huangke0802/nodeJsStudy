@@ -4,7 +4,7 @@ var url = require('url');
 var routesMy = require("./models/rout01");
 // var readFile = require("./models/optfile");
 http.createServer(function (req, res) {
-    res.writeHead(200, {'Content-Type': 'text/html; charset=utf-8'});
+    res.writeHead(200, { 'Content-Type': 'text/html; charset=utf-8' });
     if (req.url !== "/favicon.ico") {//清楚第2次访问
         // readFile.readfileSync("./views/login.html");
         // function recall(data){
@@ -18,9 +18,9 @@ http.createServer(function (req, res) {
 
         console.log(pathname);
 
-        if(pathname != ""){
+        if (pathname != "") {
             routesMy[pathname](req, res);
-        }else{
+        } else {
 
             res.write("首页");
             res.end("");//http响应尾，不写则没有http响应尾

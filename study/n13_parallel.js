@@ -29,9 +29,9 @@ function twoFun()
 /*oneFun();
 twoFun();*/
 
-//串行
+//并行无关联
 function exec(){
-    aysc.series({
+    aysc.parallel({
         one : function(done){
             ii = 0;
             setInterval(function(){

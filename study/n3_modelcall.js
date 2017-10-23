@@ -3,9 +3,9 @@ var User = require('./models/User');
 
 var Teacher = require('./models/Teacher');
 
-http.createServer(function (req, res){
-    res.writeHead(200, {'Content-Type':'text/html; charset=utf-8'});
-    if(req.url !== "/favicon.ico"){
+http.createServer(function (req, res) {
+    res.writeHead(200, { 'Content-Type': 'text/html; charset=utf-8' });
+    if (req.url !== "/favicon.ico") {
         var user = new User(1, "张三", 20);
         var teacher = new Teacher(2, "陈星", 30);
         user.enter();

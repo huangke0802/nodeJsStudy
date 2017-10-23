@@ -42,9 +42,24 @@ module.exports ={
         req.on('end', function () {
             post = querystring.parse(post);
             console.log(post);
-            console.log("收到参数 email：" + post['email'] + '\n');
-            console.log("收到参数 pwd：" + post['pwd'] + '\n');
-            var recall = reCall (req, res);
+            // console.log("收到参数 email：" + post['email'] + '\n');
+            // console.log("收到参数 pwd：" + post['pwd'] + '\n');
+            // var recall = reCall (req, res);
+            //
+            // readFile.readfile("./views/login.html", recall);
+
+            var arr = ['email', 'pwd'];
+            function recall (data){
+                // console.log(dataStr);
+                var dataStr = data.toString();
+                console.log(dataStr);
+                for(var i = 0;i<arr.length;i++){
+                    var str = new RegExp('{' + arr[i] +'}', 'g');
+                    dataStr = dataStr.replace(str, post[arr[i]]);
+                }
+                res.write(dataStr);
+                res.end("");//http响应尾，不写则没有http响应尾
+            };
 
             readFile.readfile("./views/login.html", recall);
         })
