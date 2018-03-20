@@ -5,12 +5,12 @@ var router = express.Router();
 router.get('/', function(req, res, next) {
   // res.render('index', { title: '欢迎来到Express' });
     // res.send("Hello, index!");
-    var loginbean = req.session.loginBean;
-    console.log(loginbean);
-    if (loginbean) {
-      console.log(loginbean.id, loginbean.nicheng);
+  var loginBean = req.session.loginBean;
+  console.log(loginBean);
+  if (loginBean) {
+    console.log(loginBean.id, loginBean.nicheng);
     }
-    res.render('index', {loginbean : loginbean});
+  res.render('index', { loginBean: loginBean});
 });
 
 //注销

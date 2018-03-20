@@ -1,52 +1,4 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title></title>
-    <link rel="stylesheet" href="/bootstrap/css/bootstrap.css">
-      <link rel="stylesheet" href="/stylesheets/index.css">
-    <script src="/javascripts/jQuery.js"></script>
-    <script src="/bootstrap/js/bootstrap.js"></script>
-    <script src="/javascripts/index.js"></script>
-  </head>
-  <body>
-    <div class="header clearfix">
-        <div class="logo"><span class="glyphicon glyphicon-comment"></span><h1>问吧</h1></div>
-        <ul class="list clearfix">
-          <li>答问</li>
-          <li>文章</li>
-          <li>笔记</li>
-          <li>活动</li>
-        </ul>
-        <div class="buttonWrap">
-            <div>
-              <input type="text" placeholder="请输入关键词">
-              <button id="reseach" type="button" class="glyphicon glyphicon-search"></button>
-            </div>
-            <% if(loginbean == undefined){ %>
-                <button type="button" class="btn btn-success" data-toggle="modal" data-target="#loginModal" href="./users/login">登录/注册</button>
-            <% }else { %>
-                <span>你好<%=loginbean.nicheng %></span>
-<button type="button" class="btn btn-default" onclick="javascript:location.href='/logout'">注销</button>
-            <% } %>
-        </div>
-    </div>
-    <div class="nav">
-        <ul class="nav-list clearfix">
-            <li>home</li>
-            <li>javascript</li>
-            <li>php</li>
-            <li>pathon</li>
-            <li>java</li>
-            <li>mysql</li>
-            <li>ios</li>
-            <li>android</li>
-            <li>node.js</li>
-            <li>html5</li>
-            <li>lunux</li>
-            <li>c++</li>
-            <li>...</li>
-        </ul>
-    </div>
+<%- include header %>
     <div class="content clearfix">
         <div class="left-content">
             <ul class="title clearfix">
@@ -119,9 +71,13 @@
     <div class="modal fade bs-example-modal-lg" id="loginModal" tabindex="-1" role="dialog" data-backdrop="static" data-keyboard="false">
         <div class="modal-dialog modal-lg" role="document">
             <div class="modal-content">
-               
-            </div><!-- /.modal-content -->
-        </div><!-- /.modal-dialog -->
-    </div><!-- /.modal -->
-  </body>
+
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
+    <!-- /.modal -->
+</body>
+
 </html>
