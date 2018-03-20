@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title><%= title %></title>
+    <title></title>
     <link rel="stylesheet" href="/bootstrap/css/bootstrap.css">
       <link rel="stylesheet" href="/stylesheets/index.css">
     <script src="/javascripts/jQuery.js"></script>
@@ -22,7 +22,12 @@
               <input type="text" placeholder="请输入关键词">
               <button id="reseach" type="button" class="glyphicon glyphicon-search"></button>
             </div>
-            <button type="button" class="btn btn-success" data-toggle="modal" data-target="#loginModal" href="./users/login">登录/注册</button>
+            <% if(loginbean == undefined){ %>
+                <button type="button" class="btn btn-success" data-toggle="modal" data-target="#loginModal" href="./users/login">登录/注册</button>
+            <% }else { %>
+                <span>你好<%=loginbean.nicheng %></span>
+<button type="button" class="btn btn-default" onclick="javascript:location.href='/logout'">注销</button>
+            <% } %>
         </div>
     </div>
     <div class="nav">

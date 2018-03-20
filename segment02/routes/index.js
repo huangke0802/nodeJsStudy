@@ -3,13 +3,21 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: '<div>欢迎来到Express</div>' });
+  // res.render('index', { title: '欢迎来到Express' });
     // res.send("Hello, index!");
+    var loginbean = req.session.loginBean;
+    console.log(loginbean);
+    if (loginbean) {
+      console.log(loginbean.id, loginbean.nicheng);
+    }
+    res.render('index', {loginbean : loginbean});
 });
 
-router.get('/ab*cd', function(req, res){
-  console.log('/ab*cd GET 请求');
-    res.send('正则匹配');
+//注销
+router.get('/logout', function(req, res){
+  req.session.destroy(function(err){ //清除session
+    res.redirect('/');
+  })
 })
 
 module.exports = router;
